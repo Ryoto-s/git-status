@@ -1,0 +1,94 @@
+<!-- idは１つの要素に複数指定できる？how about class -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="contents">
+            <h1>DOTVAL</h1>
+            <ul class="header-nav">
+                <li class="header-nav-item">特徴</li>
+                <li class="header-nav-item">学習ルート</li>
+                <li class="header-nav-item">応募ページ</li>
+            </ul>
+        </div>
+    </header>
+    <!-- ヘッダー終わり -->
+    
+    <!-- トップ -->
+    <div class="top">
+        <h1 class="top-title">CREATE</h1>
+        <p class="top-text">根本的なプログラミング力を鍛える</p>
+    </div>
+    <!-- トップ終わり -->
+
+    <!-- コンテンツ -->
+    <!-- shit + alt + ↓　で選択された範囲を複製 -->
+    <div class="contents">
+        <h2 class="contents-title">学べるコンテンツ</h2>
+        <div class="contents-item">
+            <img src="img/html5.svg" class="contents-item-icon">
+            <h3 class="contents-item-title">HTML</h3>
+            <p class="contents-item-text"><a href="https://developer.mozilla.org/ja/docs/Web/HTML">HTML</a>を学べます</p>
+        </div>
+        <div class="contents-item">
+            <img src="img/css-5.svg" class="contents-item-icon">
+            <h3 class="contents-item-title">CSS</h3>
+            <p class="contents-item-text"><a href="https://developer.mozilla.org/ja/docs/Glossary/CSS">CSS</a>を学べます</p>
+        </div>
+        <div class="contents-item">
+            <img src="img/javascript-4.svg" class="contents-item-icon">
+            <h3 class="contents-item-title">JavaScript</h3>
+            <p class="contents-item-text"><a
+                    href="https://developer.mozilla.org/ja/docs/Glossary/JavaScript">JavaScript</a>を学べます</p>
+        </div>
+    </div>
+    <!-- コンテンツ終わり -->
+
+    <!-- お問い合わせ -->
+    <div class="contact">
+        <!-- データを入れるところに名前(name)をつける -->
+        <h2 class="contact-title">お問い合わせ</h2>
+        <!-- googleformからformタグのactionを探してくる -->
+        <!-- <form target="_blank"→別タブに表示できる action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSez5nZ1c0pffrqvkXf1S4M44zrWUZXh-XToeaZ70jOOpb1z3w/formResponse" class="contact-form"> -->
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="onLoad()"></iframe>
+            <form id="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSez5nZ1c0pffrqvkXf1S4M44zrWUZXh-XToeaZ70jOOpb1z3w/formResponse" class="contact-form" method="post" target="hidden_iframe" onsubmit="submitted=true">
+            <p class="contact-form-title">お名前<span class="red-required">*</span></p>
+            <input type="text" name="entry.1463193039" class="contact-form-input" placeholder="必須入力項目です" id="name">
+
+            <p class="contact-form-title">メールアドレス<span class="red-required">*</span></p>
+            <input type="email" name="entry.1772008847" class="contact-form-input" placeholder="必須入力項目です" id="email">
+
+            <p class="contact-form-title">興味のある言語<span class="red-required">*</span></p>
+            <select name="entry.745465819" class="contact-form-title">
+                <option value="" style="display: none;">選択してください</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">css</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+
+            <p class="contact-form-title">お問い合わせ内容<span class="red-required">*</span></p>
+            <textarea type="content" name="entry.1218579879" class="contact-form-textarea" placeholder="必須入力項目です" id="content"></textarea>
+
+            <input value="送信" type="submit" class="contact-form-submit"></imput>
+            
+        </form>
+        <p id="success" style="display: none">送信が完了しました。お問い合わせ、ありがとうございました。</p>
+    </div>
+    <!-- お問い合わせ終わり -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+<!-- inline-block は文字 text-alignで指定したければ上位の要素で -->
+<!-- ctrl + D ( * N ) で同様文字の選択 -->

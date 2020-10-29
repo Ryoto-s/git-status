@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+}
+
+
+/* ヘッダー */
+header{
+    background-color: #444;
+    color: #fafafa;
+    width: 100%;
+
+}
+
+header::after{
+    /* float指定ではそれが前に来るので、下の記述で見えるように(clear fix) */
+    clear: both;
+    content: "";
+    display: block;
+    /* ここでは、headerタグに{overflow: hidden;}でもできるらしい */
+}
+
+header h1{
+    font-size: 32px;
+    font-weight: normal;
+    float: left;
+}
+
+.header-nav{
+    float: right;
+}
+
+.header-nav-item{
+    float: left;
+    /* inlineにすると点が消える→Block、inline-Blockは？ */
+    display: inline-block;
+    margin: 10px 20px 0 0;
+}
+
+.contents{
+    padding: 18px 0 18px 10px;
+}
+
+/* トップ */
+.top{
+    text-align: center;
+    background-image: url(img/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fafafa;
+    padding: 200px 0;
+}
+
+.top-title{
+    font-size: 60px;
+}
+
+.top-text{
+    font-size: 40px;
+}
+
+/* コンテンツ */
+.contents{
+    text-align: center;
+    /* 3つ指定で　上　左右　下の順に余白 */
+    padding: 20px 0 100px;
+}
+
+.contents-title{
+    font-size: 40px;
+    text-align: center;
+}
+
+.contents-item{
+    display: inline-block;
+    width: 200px;
+    margin: 40px 16px 0;
+}
+
+.contents-item-icon{
+    /* 画像は縦横どちらかを指定すれば勝手に縮小拡大する */
+    width: 80px;
+}
+
+.contents-item-title{
+    font-size: 24px;
+}
+
+.contents-item-text{
+    font-size: 20px;
+}
+
+/* お問い合わせ */
+.contact{
+    background-color: #444;
+    color: #fafafa;
+    padding: 20px 0 100px;
+}
+
+.contact-title{
+    font-size: 40px;
+    text-align: center;
+}
+
+.contact-form{
+    width: 350px;
+    margin: 0 auto;
+}
+
+.contact-form-title{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.red-required{
+    color: tomato;
+}
+
+
+.contact-form-input, .contact-form-textarea, .contact-form-select, .contact-form-submit{
+    display: block;
+}
+
+.contact-form-input, .contact-form-textarea{
+    width: 100%;
+    padding: 6px;
+    font-size: 14px;
+}
+
+.contact-form-textarea{
+    height: 80px;
+}
+
+.contact-form-submit{
+    border: none;
+    padding: 6px 20px;
+    font-size: 14px;
+    margin: 28px auto 0;
+}
